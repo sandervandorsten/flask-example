@@ -1,23 +1,9 @@
-.centered {
-	text-align: center;
+#defaultCanvas0 {
+  width: 100%;
+  height: 100%;
 }
-
-.logo {
-	height: 25%;
-	padding: 2.5%
-}
-
-#code {
-	resize: none;
-	width: 100%;
-	height: 60%;
-}
-
-#code:focus{
-	outline: none !important;
-}
-
-.go {
-	border-radius: 7px;
-	margin: 5%;
+#defaultCanvas0
+body {
+  /*overflow: hidden;*/
+/*  background: #eee;*/
 }
