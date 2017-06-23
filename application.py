@@ -31,9 +31,13 @@ def hoi():
 
 @app.route("/")
 def hello():
-	style    = url_for('static', filename ='style.css')
-	jquery   = url_for('static', filename='jquery-1.11.2.min.js')
-	return render_template('index.html', style = style, jquery = jquery)
+	style   = url_for('static', filename ='style.css')
+	p5      = url_for('static', filename='p5.min.js')
+	sketch  = url_for('static', filename='sketch.js')
+	return render_template('index.html',
+                           style=style,
+                           p5=p5,
+                           sketch=sketch)
 
 # @app.route("/run", methods=['POST'])
 # def run():
