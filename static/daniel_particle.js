@@ -31,7 +31,7 @@ function Particle() {
   this.pos = createVector(random(width), random(height));
   this.vel = createVector(0, 0);
   this.acc = createVector(0, 0);
-  this.maxspeed = 4;
+  this.maxspeed = 1;
   this.h = 0;
   // this.color = '#000000';
 
@@ -57,14 +57,8 @@ function Particle() {
   }
 
   this.show = function() {
-    var color = `hsl(${Math.floor(this.pos.x/width*256)},40%,${60+Math.random()*20}%)`;
-    // stroke(this.h, 255, 255, 25);
-    // this.h = this.h + 1;
-    // if (this.h > 255) {
-    //   this.h = 0;
-    // }
-    stroke(0, 20);
-    strokeWeight(2);
+    stroke(0, 5);
+    strokeWeight(1);
     line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
     this.updatePrev();
   }

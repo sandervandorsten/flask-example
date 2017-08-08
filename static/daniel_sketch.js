@@ -16,7 +16,7 @@ var flowfield;
 
 function setup() {
     var w = window.innerWidth;
-    var h = window.innerHeight;
+    var h = 300;
   createCanvas(w, h);
   colorMode(HSB, 255);
   cols = floor(w / scl);
@@ -32,7 +32,7 @@ function setup() {
 
 function resize() {
   width = window.innerWidth;
-  height = window.innerHeight;
+  height = 300;
   canvas.width = width;
   canvas.height = height;
   setup();
@@ -46,10 +46,10 @@ function draw() {
           var index = x + y * cols;
           var angle = noise(xoff, yoff, zoff) * TWO_PI * 4;
           var v = p5.Vector.fromAngle(angle);
-          v.setMag(1.5);
+          v.setMag(0.2);
           flowfield[index] = v;
           xoff += inc;
-          stroke(0, 50);
+          stroke(0, 5);
           yoff += inc;
 
           zoff += 0.0001;
