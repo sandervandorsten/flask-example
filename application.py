@@ -7,8 +7,8 @@ app = Flask(__name__)
 def hello():
 	style   = url_for('static', filename ='style.css')
 	p5      = url_for('static', filename='p5.min.js')
-	sketch  = url_for('static', filename='daniel_sketch.js')
-	particle  = url_for('static', filename='daniel_particle.js')
+	sketch  = url_for('static', filename='sketch.js')
+	particle  = url_for('static', filename='particle.js')
 	return render_template('index.html',
                            style=style,
                            p5=p5,
