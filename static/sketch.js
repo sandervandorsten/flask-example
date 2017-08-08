@@ -8,19 +8,18 @@ var particles = [];
 
 var flowfield;
 
-window.onresize = function() {
-  var w = window.innerWidth;
-  var h = window.innerHeight;
-  // canvas.size(w,h);
-  width = w;
-  height = h;
-};
+
 
 function setup() {
+    // window.onresize = function() {
+    //   var w = window.innerWidth;
+    //   var h = window.innerHeight;
+    //   width = w;
+    //   height = h;
+    // };
   createCanvas(window.innerWidth, window.innerHeight);
   cols = floor(window.innerWidth / scl);
   rows = floor(window.innerHeight / scl);
-
   flowfield = new Array(cols * rows);
   for (var i = 0; i < 200; i++){
       particles[i] = new Particle();
@@ -38,7 +37,7 @@ function draw() {
             var v = p5.Vector.fromAngle(angle);
             v.setMag(0.5);
             flowfield[index] = v;
-
+            
             xoff += inc;
 
         }
